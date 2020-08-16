@@ -35,6 +35,9 @@
                 "Chiron\\Views\\Bootloader\\PublishViewsBootloader",
                 "Chiron\\Views\\Bootloader\\ViewsCommandBootloader",
                 "Chiron\\Views\\Bootloader\\ViewsBootloader"
+            ],
+            "providers": [
+                "Chiron\\Views\\Provider\\PhpRendererServiceProvider"
             ]
         }
     },
