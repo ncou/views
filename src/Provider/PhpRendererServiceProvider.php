@@ -4,7 +4,7 @@ namespace Chiron\Views\Provider;
 
 use Chiron\Views\Engine\PhpRenderer;
 use Chiron\Views\TemplateRendererInterface;
-use Chiron\Bootload\ServiceProvider\ServiceProviderInterface;
+use Chiron\Core\Container\Provider\ServiceProviderInterface;
 use Chiron\Container\BindingInterface;
 
 final class PhpRendererServiceProvider implements ServiceProviderInterface

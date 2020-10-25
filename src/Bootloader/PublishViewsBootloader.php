@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace Chiron\Views\Bootloader;
 
 use Chiron\Core\Directories;
-use Chiron\Bootload\AbstractBootloader;
+use Chiron\Core\Container\Bootloader\AbstractBootloader;
 use Chiron\PublishableCollection;
 
 final class PublishViewsBootloader extends AbstractBootloader

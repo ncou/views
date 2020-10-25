@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Chiron\Views\Bootloader;
 
-use Chiron\Bootload\AbstractBootloader;
+use Chiron\Core\Container\Bootloader\AbstractBootloader;
 use Chiron\Views\Config\ViewsConfig;
 use Chiron\Views\TemplateRendererInterface;
 
