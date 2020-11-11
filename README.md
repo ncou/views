@@ -10,10 +10,10 @@
 [![PHP-Eye](https://php-eye.com/badge/chiron/template/tested.svg?style=flat)](https://php-eye.com/package/chiron/template)
 [![PHPStan](https://img.shields.io/badge/PHPStan-enabled-brightgreen.svg?style=flat)](https://github.com/phpstan/phpstan)
 
-Template Interface
+Template Renderer Interface
 ---------------
 
-    $ composer require chiron/template
+    $ composer require chiron/views
     
 TODO 
 - Allow to add some attributes restricted on a given namespace.
