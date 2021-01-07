@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace Chiron\Views\Command;
 
 use Chiron\Filesystem\Filesystem;
-use Chiron\Console\AbstractCommand;
+use Chiron\Core\Console\AbstractCommand;
 use Chiron\PublishableCollection;
 use Symfony\Component\Console\Input\InputOption;
 use Chiron\Views\Config\TwigConfig;
