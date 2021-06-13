@@ -6,7 +6,7 @@ namespace Chiron\Views\Bootloader;
 
 use Chiron\Core\Directories;
 use Chiron\Core\Container\Bootloader\AbstractBootloader;
-use Chiron\Core\Publisher;
+use Chiron\Publisher\Publisher;
 
 final class PublishViewsBootloader extends AbstractBootloader
 {

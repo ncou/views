@@ -7,17 +7,21 @@ namespace Chiron\Views\Bootloader;
 use Chiron\Core\Container\Bootloader\AbstractBootloader;
 use Chiron\Views\Config\ViewsConfig;
 use Chiron\Views\TemplateRendererInterface;
+use Chiron\Core\Directories;
+
+//https://github.com/spiral/framework/blob/master/src/Framework/Bootloader/Views/ViewsBootloader.php#L47
 
 final class ViewsBootloader extends AbstractBootloader
 {
     public function boot(TemplateRendererInterface $renderer, ViewsConfig $config): void
     {
-/*
+
 // TODO : ne pas définir le répertoire views dans le paths.php et ne pas faire de merge dans le DirectoryBootloader, mais l'ajouter ici lors de ce bootloader !!!! Il faudra ensuite nettoyer le paths.php de l'appli en ligne de commande "app-cli" pour retirer la ligne "views" car cela n'a pas de sens de le définir alors qu'on est sur une appli en ligne de commandes.
-        if (!$dirs->has('views')) {
-            $dirs->set('views', $dirs->get('app') . 'views');
-        }
-*/
+        /*
+        if (! $directories->has('@views')) {
+            $directories->set('views', $directories->get('@resources/views/');
+        }*/
+
 
         // Force file extension to use (only if not null).
         if ($extension = $config->getExtension()) {
