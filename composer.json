@@ -6,11 +6,14 @@
     "homepage": "https://github.com/ncou/Chiron-Template",
     "license": "MIT",
     "require": {
-        "php": "^7.0"
+        "php": "^7.2",
+        "chiron/core": "^1.0"
     },
     "require-dev": {
-        "phpunit/phpunit": "^7.0",
-        "phpstan/phpstan": "^0.9.2"
+        "phpunit/phpunit": "^8.0",
+        "phpstan/phpstan": "^0.12",
+        "phpstan/phpstan-phpunit": "^0.12",
+        "chiron/coding-standard": "^3.0"
     },
     "autoload": {
         "psr-4": {
@@ -21,13 +24,11 @@
         "psr-4": { "Chiron\\Views\\Tests\\" : "tests/" }
     },
     "scripts": {
-        "test": [
-            "@phpunit",
-            "@phpstan"
-        ],
         "phpunit": "phpunit --colors=always",
-        "phpstan": "phpstan analyse src --level=0",
-        "test-coverage": "phpunit --coverage-clover clover.xml"
+        "test-coverage": "phpunit --coverage-clover clover.xml",
+        "phpstan": "phpstan analyse --ansi",
+        "check-style": "phpcs src tests",
+        "fix-style": "phpcbf src tests"
     },
     "extra": {
         "chiron": {
