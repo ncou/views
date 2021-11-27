@@ -6,11 +6,11 @@
     "homepage": "https://github.com/ncou/Chiron-Template",
     "license": "MIT",
     "require": {
-        "php": "^7.2",
+        "php": "^8.0|^8.1",
         "chiron/core": "^1.0"
     },
     "require-dev": {
-        "phpunit/phpunit": "^8.0",
+        "phpunit/phpunit": "^9.5",
         "phpstan/phpstan": "^0.12",
         "phpstan/phpstan-phpunit": "^0.12",
         "chiron/coding-standard": "^3.0"
