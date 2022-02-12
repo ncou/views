@@ -21,6 +21,8 @@ use Twig\Source;
 use Twig\Loader\FilesystemLoader;
 use Chiron\Views\TemplateRendererInterface;
 
+// TODO : virer les références à TWIG !!!!
+
 final class ViewsListCommand extends AbstractCommand
 {
     /** @var \Twig\Environment */
@@ -33,6 +35,7 @@ final class ViewsListCommand extends AbstractCommand
         $this->setDescription('List the registered views paths and associated namespaces.');
     }
 
+    // TODO : virer le paramétre Filesystem $filesystem qui ne sert à rien !!!!
     public function perform(Filesystem $filesystem, TemplateRendererInterface $renderer): int
     {
         // TODO : gérer le cas ou le tableau de $paths est vide et dans ce cas afficher le message : 'No template paths configured for your application.'
@@ -75,15 +78,15 @@ final class ViewsListCommand extends AbstractCommand
         $prevHasSeparator = false;
 
         foreach ($loaderPaths as $namespace => $paths) {
-            if (!$firstNamespace && !$prevHasSeparator && \count($paths) > 1) {
+            if (!$firstNamespace && !$prevHasSeparator && count($paths) > 1) {
                 $rows[] = ['', ''];
             }
             $firstNamespace = false;
             foreach ($paths as $path) {
-                $rows[] = [$namespace, $path.\DIRECTORY_SEPARATOR];
+                $rows[] = [$namespace, $path.DIRECTORY_SEPARATOR];
                 $namespace = '';
             }
-            if (\count($paths) > 1) {
+            if (count($paths) > 1) {
                 $rows[] = ['', ''];
                 $prevHasSeparator = true;
             } else {
